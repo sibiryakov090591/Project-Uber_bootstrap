@@ -21,22 +21,18 @@
             width: 290px
             &_text
                 font-size: 22px
-
-    .car
-        .car_img
-            transform: translateX(12%)
-
+    
     footer
+        .social
+            margin-top: 15px
+            display: flex
+            justify-content: center
+            transform: translate(0, 0)
         .store
-            .app
-                width: 82px
-                transform: translateX(-3px)
-            .google
-                width: 96px
-                transform: translate(0px, -6.5px)
-            .win
-                width: 75px
-
+            display: flex
+            justify-content: center
+            position: sticky
+            margin-top: 20px
 
 @media (max-width: 991px)
     .menu
@@ -89,53 +85,50 @@
             &_text
                 font-size: 22px
     
-    .car
-        .car_img
-            transform: translateX(-5%)
-            
-    footer
-        .store
-            .app
-                transform: translate(124px, 28px)
-        .footer_menu
-            li
-                margin: 0 15px
-            &_sub
                 li
                     margin: 0 7px
 
 @media (max-width: 767px)
-    .sm-display-none
-        display: none
+    header
+        .nav_desctop
+            .hamburger
+                display: block
     .call_top
         .logo
             width: 115%
-    .menu
-        display: none
-    .hamburger
-        cursor: pointer
-        position: absolute
-        right: 5px
-        width: 90px
-        height: 50px
-        display: flex
-        justify-content: flex-end
-        transform: translateY(4px)
-        &:active
-            span
-                &:nth-child(1)
-                    transform: rotate(45deg)
-        span
-            height: 3px
-            width: 30px
-            background-color: #fff
+        .sm-display_none
+            display: none
+        .phone_sm
+            display: block
+            width: 147px
+            margin: 10px 0 3px 0
+            font-size: 18px
+            text-align: center
+        .btn_top_call
             margin-top: -3px
-            &:nth-child(1)
-                transform: translate(44px, 17px)
-            &:nth-child(2)
-                transform: translate(14px, 24px)
-            &:nth-child(3)
-                transform: translate(-16px, 31px)
+            
+    .menu
+        position: fixed
+        flex-direction: column
+        top: 0
+        right: -50%
+        width: 50%
+        height: 100vh
+        background-color: rgba(0, 0, 0, .9)
+        padding: 20px 15px
+        margin: 0
+        justify-content: center
+        align-items: center
+        transition: .3s all
+        &_active
+            right: 0
+        .nav_item
+            .nav_link
+                margin-top: 20px
+                font-size: 18px  
+        span
+            display: none
+        
     .request 
         .partners
             margin: 150px 0 100px 0
@@ -151,44 +144,76 @@
         vertical-align: middle
         &_end
             margin-top: 25px
-    .car
-        .car_img
-            width: 563px
     .conditions_item_head
         margin-top: 30px
-    footer           
-        .social
-            transform: translateY(-141px)
-            &_item
-                display: flex
-                margin: 3px
-        .store
-            .app
-                right: 0
-                transform: translate(-7px, 0)
-            .google
-                right: 0
-                transform: translate(0, 21px)
-            .win
-                right: 0
-                transform: translate(-7px, -29px)
+
 @media (max-width: 575px)
-    .car
-        .car_img
-            width: 100%
-            transform: translate(-13px, 70px)
-    footer           
-        .social
-            transform: translateY(-141px)
-            &_item
-                display: inline-flex
-                margin: 3px
-        .store
-            
-            .app
-                right: 0
-                transform: translate(-7px, 0)
-            .google
-                right: 0
-                transform: translate(0, 21px)
-            .win
+    .menu
+        width: 70%
+        right: -70%
+        &_active
+            right: 0
+        .nav_item
+            .nav_link
+                font-size: 16px             
+    .call_top
+        .logo
+            width: 195px
+            margin-top: 35px
+        .logo_sub_text
+            display: none
+        .phone
+            display: block
+        .phone_sm
+            text-align: left
+            width: 129px
+            font-size: 17px
+        .btn_top_call
+            width: 125px
+            height: 40px
+            font-size: 12px
+            line-height: 20px
+    .request
+        .partners_descr
+            display: none
+    .sub_car
+        display: none
+    .advantages_item_descr
+        width: 90%
+
+    .end_line
+        display: none
+    footer
+        .footer_menu
+            display: block
+            text-align: center
+            li
+                margin-top: 5px
+
+@media (max-width: 374px)
+    .menu
+        width: 70%
+        right: -70%
+        &_active
+            right: 0
+        .nav_item
+            .nav_link
+                font-size: 14px 
+    .call_top
+        .phone_sm
+            position: absolute
+            left: -6px
+            margin-top: 18px
+        .btn_top_call
+            min-height: 28px
+            height: 28px
+            position: absolute
+            left: -7px
+            bottom: -32px
+            margin-bottom: 10px
+        .logo
+            width: 145px
+    .mobile_item
+        width: 275px
+        height: 230px
+

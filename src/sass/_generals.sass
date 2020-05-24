@@ -3,16 +3,45 @@ header
     height: 50px
 
 .nav_desctop
+    display: flex
+    justify-content: flex-end
+    align-items: center
     background-color: #212121
     height: 50px
     position: fixed
     width: 100%
     z-index: 3
-
-.hamburger
-    display: none
+    .hamburger
+        z-index: 50
+        right: 23px
+        top: 18px
+        width: 30px
+        height: 17px
+        display: none
+        position: absolute
+        span
+            display: block
+            width: 100%
+            height: 3px
+            margin-bottom: 4px
+            background-color: #fff
+            transition: .3s all
+        &_active
+            margin-top: 5px
+            span
+                margin-bottom: -3px
+                &:nth-child(1)
+                    transition: .3s all
+                    transform: rotate(45deg)
+                &:nth-child(2)
+                    transition: 0s all
+                    visibility: hidden
+                &:nth-child(3)
+                    transition: .3s all
+                    transform: rotate(-45deg)
 
 .menu
+    margin-top: 18px
     display: flex
     justify-content: space-around
     padding: 14px 0
@@ -21,6 +50,9 @@ header
         width: 2px
         border-right: 2px dotted black
         margin-top: -3px
+    
+
+        
 
     .nav_item
         display: inline-flex
@@ -59,9 +91,11 @@ header
         font-weight: 400
         text-align: right
         margin-top: -2px
+    .phone_sm
+        display: none
     .btn_top_call
         outline: none
-        height: 45px
+        min-height: 45px
         width: 170px
         margin-top: 23px
         font-size: 14px
@@ -254,8 +288,9 @@ header
                     background-color: #eb5a5a
 
 .car
+    text-align: center
     position: relative
-    min-height: 480px
+    height: 480px
     background-color: #000000
     padding-top: 45px
     &_sub_head_white
@@ -266,10 +301,9 @@ header
         font-weight: 300
         color: #fff
     .car_img
-        width: 750px
+        max-width: 99%
         display: block
-        position: absolute
-        transform: translateX(23%)
+        margin: 0 auto
     
 .sub_car
     min-height: 385px
@@ -342,12 +376,16 @@ header
             color: #0d859b
 
 footer
+    width: 100%
     .line
         height: 3px
         width: 300px
         background-color: #1ca8c3
         display: block
         margin: 10px auto 45px auto
+    .footer_block
+        width: 100%
+        position: relative
     .footer_menu
         list-style-type: none
         display: flex
@@ -377,9 +415,8 @@ footer
         width: 100%
         background-color: #000000
     .social
-        transform: translateY(-85px)
-        position: absolute
-        margin-left: 20px
+        display: inline-flex
+        transform: translate(10px, -63px)
         a
             text-decoration: none
         &_item
@@ -397,21 +434,16 @@ footer
             i
                 color: #ffffff
     .store
-        transform: translateY(-80px)
+        position: absolute
+        right: 8px
+        top: 6px
         a
             text-decoration: none
         .app
-            width: 96px
-            position: absolute
-            transform: translateX(-41px)
-            right: 180px
+            transform: translateY(3px)
+            width: 100px
         .google
-            width: 113px
-            position: absolute
-            transform: translate(-18px, -7.5px)
-            right: 90px
+            width: 100px
         .win
-            position: absolute
-            transform: translate(-19px, -1.5px)
-            right: 0
-            width: 90px
+            transform: translateY(-1px)
+            width: 100px

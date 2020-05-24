@@ -9,20 +9,22 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="https://kit.fontawesome.com/a8cd8969cb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <header>
         <nav class="nav_desctop">
+
+
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <div class="container">
 
+
+            <div class="container">
                 <ul class="menu">
                     <li class="nav_item"><a href="#!" class="nav_link">Главная</a></li>
                     <span></span>
@@ -43,13 +45,13 @@
     <section class="call_top">
         <div class="container">
             <div class="row">
-                <div class="col-5  col-sm-5 offset-sm-1 col-md-4 offset-md-1 col-lg-4 offset-lg-1">
+                <div class="col-5 col-sm-5 offset-sm-1 col-md-4 offset-md-1 col-lg-4 offset-lg-1">
                     <a href="#!"><img src="img/logo.png" alt="logo" class="logo"></a>
                     <div class="logo_sub_text">
                         Официальный партнер Uber в Москве
                     </div>
                 </div>
-                <div class="col-sm-5 col-md-3 offset-md-1 col-lg-3 offset-lg-1 col-xl-2 offset-xl-2 sm-display-none">
+                <div class="col-sm-5 col-md-3 offset-md-1 col-lg-3 offset-lg-1 col-xl-2 offset-xl-2 sm-display_none">
                     <div class="phone_sub_text">
                         Звоните нам ежедневно
                     </div>
@@ -57,7 +59,10 @@
                         8 495 797 09 88
                     </div>
                 </div>
-                <div class="col-2 offset-1 offset-sm-1 offset-md-0">
+                <div class="col-3 offset-2 offset-sm-1 offset-md-0">
+                    <div class="phone phone_sm">
+                        8 495 797 09 88
+                    </div>
                     <button class="btn_top_call">заказать звонок</button>
                 </div>
             </div>
@@ -387,43 +392,52 @@
 
     <footer>
         <div class="line"></div>
-        <ul class="footer_menu">
-            <li><a href="#!">на главную</a></li>
-            <li><a href="#!">города</a></li>
-            <li><a href="#!">для водителей</a></li>
-        </ul>
-        <div class="footer_menu_sub">
-            <ul class="footer_menu footer_menu_sub">
-                <li><a href="#!">центр поддержки</a></li>
-                <li><a href="#!">вакансии</a></li>
-                <li><a href="#!">разработчики</a></li>
-                <li><a href="#!">блог</a></li>
-                <li><a href="#!">о нас</a></li>
+        <div class="footer_block">
+            <ul class="footer_menu">
+                <li><a href="#!">на главную</a></li>
+                <li><a href="#!">города</a></li>
+                <li><a href="#!">для водителей</a></li>
             </ul>
-        </div>
-        <div class="store">
-            <a href="#!"><img src="icons/appstore.png" alt="apple_store" class="app"></a>
-            <a href="#!"><img src="icons/googleplay.png" alt="google_play" class="google"></a>
-            <a href="#!"><img src="icons/windowsstore.png" alt="windows_store" class="win"></a>
-        </div>
-        
-        <div class="social">
-            <a href="#!">
-                <div class="social_item"><i class="fab fa-facebook-f"></i></div>
-            </a>
-            <a href="#!">
-                <div class="social_item"><i class="fab fa-twitter"></i></div>
-            </a>
-            <a href="#!">
-                <div class="social_item"><i class="fab fa-invision"></i></div>
-            </a>
-            <a href="#!">
-                <div class="social_item"><i class="fab fa-instagram"></i></div>
-            </a>
+            <div class="footer_menu_sub">
+                <ul class="footer_menu footer_menu_sub">
+                    <li><a href="#!">центр поддержки</a></li>
+                    <li><a href="#!">вакансии</a></li>
+                    <li><a href="#!">разработчики</a></li>
+                    <li><a href="#!">блог</a></li>
+                    <li><a href="#!">о нас</a></li>
+                </ul>
+            </div>
+
+            <div class="social">
+                <a href="#!">
+                    <div class="social_item"><i class="fab fa-facebook-f"></i></div>
+                </a>
+                <a href="#!">
+                    <div class="social_item"><i class="fab fa-twitter"></i></div>
+                </a>
+                <a href="#!">
+                    <div class="social_item"><i class="fab fa-invision"></i></div>
+                </a>
+                <a href="#!">
+                    <div class="social_item"><i class="fab fa-instagram"></i></div>
+                </a>
+            </div>
+
+            <div class="store">
+                <a href="#!"><img src="icons/appstore.png" alt="apple_store" class="app"></a>
+                <a href="#!"><img src="icons/googleplay.png" alt="google_play" class="google"></a>
+                <a href="#!"><img src="icons/windowsstore.png" alt="windows_store" class="win"></a>
+            </div>
+
         </div>
         <div class="end_line"></div>
     </footer>
-    
+
+    <script src="libs/jquery/jquery-3.5.1.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/menu_list.js"></script>
+    <script src="https://kit.fontawesome.com/a8cd8969cb.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
